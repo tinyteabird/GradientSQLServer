@@ -28,7 +28,7 @@ CREATE TABLE Orders (
     PayCheckType varchar(255),
     PaySum money,
     PaySumAfterStateTax money,
-    ClientID int FOREIGN KEY REFERENCES Clients (ClientID)
+    CONSTRAINT FK_ClientID FOREIGN KEY (ClientID) REFERENCES Clients (ClientID)
 );
 GO
 
